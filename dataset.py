@@ -7,7 +7,7 @@ from torch.utils.data import Dataset, DataLoader
 # Load split
 def load_split(dataset):
     outputs = []
-    with open(f"/content/CSTA/splits/{dataset}_splits.txt", "r") as f:
+    with open(f"/contents/CSTA/splits/{dataset}_splits.txt", "r") as f:
         lines = f.readlines()
         for line in lines:
             _, _, train_videos, test_videos = line.split("/")
@@ -70,7 +70,7 @@ def create_dataloader(dataset):
     loaders = []
 
     splits = load_split(dataset=dataset)
-    data_path = f"content/drive/MyDrive/research/paper2/data/eccv16_dataset_{dataset.lower()}_google_pool5.h5"
+    data_path = f"/drive/MyDrive/research/paper2/data/eccv16_dataset_{dataset.lower()}_google_pool5.h5"
 
     for train_videos, test_videos in splits:
         train_data = load_h5(
