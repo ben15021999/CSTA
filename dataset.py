@@ -70,7 +70,7 @@ def create_dataloader(dataset):
     loaders = []
 
     splits = load_split(dataset=dataset)
-    data_path = f"/drive/MyDrive/research/paper2/data/eccv16_dataset_{dataset.lower()}_google_pool5.h5"
+    data_path = f"drive/MyDrive/research/paper2/data/eccv16_dataset_{dataset.lower()}_google_pool5.h5"
 
     for train_videos, test_videos in splits:
         train_data = load_h5(
