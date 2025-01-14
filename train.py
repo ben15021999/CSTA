@@ -187,6 +187,6 @@ for dataset in tqdm(
                 model_selection_spear = np.mean(val_spears)
                 torch.save(model.state_dict(), "CSTA/tmp/weight.pt")
         shutil.move(
-            "./tmp/weight.pt",
+            "CSTA/tmp/weight.pt",
             f"drive/MyDrive/research/paper2/weights/{dataset}/split{split_id+1}.pt",
         )
